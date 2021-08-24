@@ -27,8 +27,8 @@ export default {
       console.log(typeof de_para)
       axios.get(url)
       .then((response) => {
-          console.log(typeof response.data.de_para);
-          const cotacao =  this.moedaB_value = ((response.data.USD_BRL) * parseFloat(this.moedaA_value)).toFixed(2);
+          console.log(response.data);
+          const cotacao =  this.moedaB_value = ((response.data[de_para]) * parseFloat(this.moedaA_value)).toFixed(2);
          console.log(typeof cotacao)
         });
     }
